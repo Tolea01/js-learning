@@ -1,6 +1,2 @@
-function extractCurrencyValue(str) {
-    console.log(Number(str.match(/\d+/)))
-    // console.log(parseInt(str.match(/\d+/)));
-}
-
-extractCurrencyValue('$120');
+const extractCurrencyValue = (str) => + str.slice(1);
+alert(extractCurrencyValue('$120') === 120); // true
