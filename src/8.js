@@ -1,7 +1,7 @@
 // username: JavaScript
 // password: fundamentals
-let username = prompt('Enter your username');
-let password = prompt('Enter your password');
+const username = prompt('Enter your username');
+const password = prompt('Enter your password');
 
 const message = username == 'JavaScript' && password == 'fundamentals' ? 'Привет' :
     username != 'JavaScript' && password != 'fundamentals' ? 'Ошибка Валидации' :
