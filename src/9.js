@@ -1,9 +1,5 @@
-let username = prompt('Enter your name');
-alert('Привет' + ' ' + username);
-let question = confirm('Знаком с языком JavaScript?');
-if (question == true) {
-    alert('Молодец');
-}
-else {
-    alert('Можно начать изучение прямо сейчас');
-}
+const username = prompt('Enter your name');
+alert(`Привет ${username}`);
+const question = confirm('Знаком с языком JavaScript?');
+const answer = question ? 'Молодец' : 'Можно начать изучение прямо сейчас';
+alert(answer);
