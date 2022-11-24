@@ -1,2 +1,2 @@
-const ucFirst = (str) => console.log(str[0].toUpperCase() + str.slice(1));
-ucFirst('вася');
+const ucFirst = (str) => str[0].toUpperCase() + str.slice(1);
+console.log(ucFirst('вася'));
