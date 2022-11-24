@@ -1,19 +1,11 @@
-function sumInputNumbers() {
-    let numbers = [];
-    let sum = 0;
-
+const sumInputNumbers = () => {
+    const numbers = [];
     while (true) {
-        let value = prompt('Introduceti cifrele');
-
+        const value = prompt('Introduceti cifrele');
         if (value == '' || value == null || !Number(value)) break;
         numbers.push(+value);
     }
-
-    numbers.map((element) => {
-        sum += element
-    })
-
-    return sum;
+    return numbers.reduce((prev, current) => prev + current, 0);
 }
 
 alert(sumInputNumbers());
