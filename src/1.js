@@ -1,6 +1,6 @@
 let array = [12, 34, 'JavaScript', 5.3];
 
-// for(let i = 0; i < array.length; i++) {
+// for (let i = 0; i < array.length; i++) {
 //     console.log(array[i]);
 // }
 
@@ -9,7 +9,7 @@ let array = [12, 34, 'JavaScript', 5.3];
 // while (i < array.length) {
 //     console.log(array[i])
 //     i++;
-//   }
+// }
 
 
 
@@ -18,24 +18,24 @@ let array = [12, 34, 'JavaScript', 5.3];
 //     console.log(array[i]);
 //     i++;
 // }
-// while(i < array.length);
+// while (i < array.length);
 
 
 
-// for(const i in array) {
+// for (const i in array) {
 //     console.log(array[i]);
 // }
 
 
 
-// for(const item of array) {
-//     console.log(item);
+// for (const i of array) {
+//     console.log(i);
 // }
 
 
-// array.forEach((elem) => console.log(elem));
+// array.forEach((i) => console.log(i));
 
 
-// array.map((elem) => console.log(elem));
+// array.map((i) => console.log(i));
 
 // I liked working with the forEach and map methods
