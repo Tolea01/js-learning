@@ -29,5 +29,5 @@ switch (n) {
         console.log('nine');
         break;
     default:
-        console.log(n + ' ' + 'is not a digit');
+        console.log(`${n} is not a digit`);
 }
