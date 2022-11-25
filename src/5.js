@@ -1,4 +1,4 @@
-let person = {
+const person = {
     name: 'Person',
     age: 123,
     salary: 1542.33,
@@ -8,7 +8,7 @@ let person = {
     },
     address: 'Moldova',
 
-}
+};
 
 person.contacts.phone = '+37312345678';
 delete person.address;
