@@ -1,4 +1,4 @@
-let person = {
+const person = {
     name: 'Person',
     age: 123,
     salary: 1542.33,
@@ -7,29 +7,29 @@ let person = {
         email: 'email@domain.com',
 
         get phone() {
-            return "phone is 112"
+            return "phone is 112";
         },
 
         get email() {
-            return "email@domain.com"
+            return "email@domain.com";
         }
     },
     adress: 'Moldova',
 
     get name() {
-        return "this name is person"
+        return "this name is person";
     },
 
     get age() {
-        return 123 * 2
+        return 123 * 2;
     },
 
     get salary() {
-        return Math.ceil(Math.random() * 100)
+        return Math.ceil(Math.random() * 100);
     },
 
     get adress() {
-        return 'adress is Moldova'
+        return 'adress is Moldova';
     }
 }
 
