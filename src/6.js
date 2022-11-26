@@ -1,19 +1,38 @@
-// ***********************************************************************************************
-function getCoordinates() {
-    let array = [{ x: 1, y: 2 }, { x: 3, y: 4 }, { x: null, y: 4 }, { x: 3, y: undefined }];
+const array = [
+    {
+        x: 1,
+        y: 2,
+    },
+    {
+        x: 3,
+        y: 4,
+    },
+    {
+        x: null,
+        y: 4,
+    },
+    {
+        x: 3,
+        y: undefined,
+    },
+];
 
-    for (let i = 0; i < array.length; i++) {
-        if (array[i].x != Number(array[i].x) || typeof array[i].x == 'undefined') {
-            delete array[i].x
-        }
 
-        if (array[i].y != Number(array[i].y) || typeof array[i].y == 'undefined') {
-            delete array[i].y
-        }
-    }
+const getCoordinates = (arr) => {
+    // return arr.reduce((o, i) => {
+    //     if (!o.find(v => v.x == i.x) && !o.find(v => v.y == i.y)) {
+    //         o.push(i);
+    //     }
+    //     return o;
+    // }, []);
 
-    console.log(array);
-}
+    for (const elem of arr) {
+        if (typeof elem.x != 'number' || typeof elem.y != 'number') {
+            delete elem.x;
+            delete elem.y;
+        };
+    };
+    return arr.filter((elem) => Object.keys(elem).length != 0);
+};
 
-getCoordinates();
-// ***********************************************************************************************
+console.log(getCoordinates(array));
