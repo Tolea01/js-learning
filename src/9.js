@@ -8,10 +8,10 @@ const weekDays = {
     "Duminica": "Su",
 }
 
-function corectOrder(obj) {
+const corectOrder = (obj) => {
     const result = {};
     Object.entries(obj).forEach(([key, value]) => result[value] = key);
-    console.log(result);
-}
+    return result;
+};
 
-corectOrder(weekDays);
+console.log(corectOrder(weekDays));
