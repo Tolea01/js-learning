@@ -7,4 +7,4 @@ const dividers = (n) => {
   }
 }
 
-dividers(15);
+dividers(10);

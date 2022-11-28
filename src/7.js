@@ -1,7 +1,7 @@
-let age = prompt();
-if(!(age < 14 || age > 90)) {
+const age = prompt();
+
+if (!(age < 14 || age > 90)) {
     alert('True');
-}
-else {
+} else {
     alert('False');
 }
