@@ -1,4 +1,5 @@
 const colors = ['red', 'green', 'blue',];
+
 const checkColor = (color) => {
     return colors.findIndex((elem) => {
         if (elem == color) {
@@ -6,4 +7,5 @@ const checkColor = (color) => {
         };
     });
 };
+
 console.log(checkColor('blue'));

@@ -1,4 +1,4 @@
-let arr = [1, 5, 0, -5, 30, 100, -500, 0, 100, 55];
+const arr = [1, 5, 0, -5, 30, 100, -500, 0, 100, 55];
 
 // 1-----------------------------------------------------------------------------
 // const greaterThan = arr.filter((elem) => elem < 5);
@@ -7,6 +7,7 @@ let arr = [1, 5, 0, -5, 30, 100, -500, 0, 100, 55];
 // 2-------------------------------------------------------------------------------
 // const maxElement = Math.max(...arr);
 // const minElement = Math.min(...arr);
+
 // console.log(`Index of min element: ${arr.indexOf(minElement)}\nIndex of max elememnt: ${arr.indexOf(maxElement)}`);
 
 
@@ -18,4 +19,5 @@ let arr = [1, 5, 0, -5, 30, 100, -500, 0, 100, 55];
 // const sum = arr.reduce((prev, current) => prev + current, 0);
 // const arithmeticValue = sum / arr.length;
 // const result = arr.filter((elem) => elem > arithmeticValue);
+
 // console.log(result); 
