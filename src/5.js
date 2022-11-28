@@ -12,4 +12,5 @@ const person = {
 
 person.contacts.phone = '+37312345678';
 delete person.address;
+
 console.log(person);

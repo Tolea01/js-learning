@@ -1,6 +1,6 @@
 const person1 = {
     name: 'Person',
-    age: 123,
+    age: 1236,
     salary: 1542.33,
     contacts: {
         phone: '112',
@@ -22,8 +22,9 @@ const person2 = {
     address: 'Moldova',
 };
 
-const Intersection = (firstObject, secondObject) => {
-    let result = {};
+const intersection = (firstObject, secondObject) => {
+    const result = {};
+
     for (let key in firstObject) {
         if (firstObject[key] == secondObject[key]) {
             result[key] = firstObject[key];
@@ -32,4 +33,4 @@ const Intersection = (firstObject, secondObject) => {
     return result;
 };
 
-console.log(Intersection(person1, person2));
+console.log(intersection(person1, person2));

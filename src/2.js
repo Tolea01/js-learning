@@ -6,4 +6,5 @@ const salaries = {
 
 const values = Object.values(salaries);
 const result = values.reduce((prev, current) => prev + current, 0);
+
 console.log(result);

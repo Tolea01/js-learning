@@ -17,7 +17,7 @@ const person = {
     adress: 'Moldova',
 
     get name() {
-        return "this name is person";
+        return this.name;
     },
 
     get age() {

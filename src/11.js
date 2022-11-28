@@ -26,12 +26,10 @@ const array = [
 ];
 
 // 1.******************************************************************************************
-const result = array.map((elem) => {
-    return {
-        name: elem.name,
-        mark: elem.marks.reduce((prev, current) => prev + current) / elem.marks.length
-    }
-});
+const result = array.map((elem) => ( {
+    name: elem.name,
+    mark: elem.marks.reduce((prev, current) => prev + current) / elem.marks.length
+}));
 
 // console.log(result)
 // ************************************************************************************************
@@ -69,9 +67,10 @@ const result = array.map((elem) => {
 
 
 // 5.******************************************************************************************
-// const studentsAverage = result.map((e) => e.mark);
-// const sum = studentsAverage.reduce((prev, current) => prev + current, 0);
-// const classAverage = sum / studentsAverage.length;
-// const result5 = result.find(elem => elem.mark > classAverage);
-// console.log(result5);
+const studentsAverage = result.map((e) => e.mark);
+const sum = studentsAverage.reduce((prev, current) => prev + current, 0);
+const classAverage = sum / studentsAverage.length;
+const result5 = result.filter(elem => elem.mark > classAverage);
+
+console.log(result5);
 // ************************************************************************************************

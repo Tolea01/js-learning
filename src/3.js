@@ -12,4 +12,5 @@ const multiplyNumeric = (obj) => {
     };
     return obj;
 };
+
 console.log(multiplyNumeric(menu));

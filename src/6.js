@@ -19,20 +19,7 @@ const array = [
 
 
 const getCoordinates = (arr) => {
-    // return arr.reduce((o, i) => {
-    //     if (!o.find(v => v.x == i.x) && !o.find(v => v.y == i.y)) {
-    //         o.push(i);
-    //     }
-    //     return o;
-    // }, []);
-
-    for (const elem of arr) {
-        if (typeof elem.x != 'number' || typeof elem.y != 'number') {
-            delete elem.x;
-            delete elem.y;
-        };
-    };
-    return arr.filter((elem) => Object.keys(elem).length != 0);
+    return arr.filter((elem) => elem.x && elem.y);
 };
 
 console.log(getCoordinates(array));
