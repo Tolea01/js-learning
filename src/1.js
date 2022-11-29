@@ -1,4 +1,4 @@
-let array = [12, 34, 'JavaScript', 5.3];
+const array = [12, 34, 'JavaScript', 5.3];
 
 // for (let i = 0; i < array.length; i++) {
 //     console.log(array[i]);
@@ -7,7 +7,7 @@ let array = [12, 34, 'JavaScript', 5.3];
 
 // let i = 0;
 // while (i < array.length) {
-//     console.log(array[i])
+//     console.log(array[i]);
 //     i++;
 // }
 
