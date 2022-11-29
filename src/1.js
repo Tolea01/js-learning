@@ -1,4 +1,4 @@
-let n = 3;
+const n = 3;
 
 switch (n) {
     case 1:

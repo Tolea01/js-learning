@@ -1,13 +1,11 @@
-let input = prompt();
+const input = prompt();
 
 if (input > 0) {
     alert(1);
 } else if (input < 0) {
     alert(-1);
-}
-else if (input == 0) {
+} else if (input == 0) {
     alert(0);
-}
-else {
+} else {
     alert('Error');
 }

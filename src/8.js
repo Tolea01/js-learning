@@ -3,8 +3,12 @@
 const username = prompt('Enter your username');
 const password = prompt('Enter your password');
 
-const message = username == 'JavaScript' && password == 'fundamentals' ? 'Привет' :
-    username != 'JavaScript' && password != 'fundamentals' ? 'Ошибка Валидации' :
-        password != 'fundamentals' ? 'Неправильный пароль' :
-            'Неправильный username'
-alert(message);
+if (username == 'JavaScript' && password == 'fundamentals') {
+    alert('Привет');
+} else if (username != 'JavaScript' && password != 'fundamentals') {
+    alert('Ошибка Валидации');
+} else if (password != 'fundamentals') {
+    alert('Неправильный пароль');
+} else if (username != 'JavaScript') {
+    alert('Неправильный username');
+}
