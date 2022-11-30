@@ -16,22 +16,22 @@ const person = {
     },
     adress: 'Moldova',
 
-    get name() {
+    get showName() {
         return this.name;
     },
 
-    get age() {
+    get calc() {
         return 123 * 2;
     },
 
-    get salary() {
+    get randomNumbers() {
         return Math.ceil(Math.random() * 100);
     },
 
-    get adress() {
-        return 'adress is Moldova';
+    get showAdress() {
+        return this.adress;
     }
 }
 
 console.log(person);
-console.log(person.contacts.phone);
+console.log(person.showName);
