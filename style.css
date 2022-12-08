@@ -9,14 +9,14 @@ body {
     flex-direction: row;
 }
 
-.red {
+#red {
     color: red;
 }
 
-.green {
+#green {
     color: green;
 }
 
-.blue {
+#blue {
     color: blue;
 }
