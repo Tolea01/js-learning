@@ -11,7 +11,7 @@ const jsonArray = JSON.stringify([
             "email": "kenedy1980@gmail.com"
         },
         "place-of-birth": "Balti",
-        "gender": "M",
+        "sex": "M",
         "job": "driver",
         "start-date": "14.12.2018",
         "IDNP": "2005375938279",
@@ -35,7 +35,7 @@ const jsonArray = JSON.stringify([
             "email": "smith1981@gmail.com"
         },
         "place-of-birth": "California",
-        "gender": "M",
+        "sex": "M",
         "job": "driver",
         "start-date": "14.12.2019",
         "IDNP": "2005373948279",
@@ -59,7 +59,7 @@ const jsonArray = JSON.stringify([
             "email": "ivan1970@gmail.com"
         },
         "place-of-birth": "England",
-        "gender": "M",
+        "sex": "M",
         "job": "HR manager",
         "start-date": "14.12.2015",
         "IDNP": "2005379438279",
@@ -88,7 +88,7 @@ for (const key of arr) {
         <td>${key.contacts.adress}</td>
         <td>${key.contacts.email}</td>
         <td>${key['place-of-birth']}</td>
-        <td>${key.gender}</td>
+        <td>${key.sex}</td>
         <td>${key.job}</td>
         <td>${key['start-date']}</td>
         <td>${key.IDNP}</td>
