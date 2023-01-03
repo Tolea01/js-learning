@@ -1,9 +1,11 @@
-let sum = 0;
-
-for (let i = 0; i <= 10; i++) {
-    if (i % 2 == 0) {
-        sum = sum + i;
-    };
+const sumEvenNumbers = (a, b) => {
+    let sum = 0;
+    for (let i = a; i <= b; i++) {
+        if (i % 2 == 0) {
+            sum += i;
+        }
+    }
+    console.log(sum);
 };
 
-console.log(sum);
+sumEvenNumbers(1, 10);
