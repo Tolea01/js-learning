@@ -1,6 +1,6 @@
 document.querySelector('#start').addEventListener('click', () => {
     const interval = setInterval(() => {
-        let hours = new Date().getHours();
+        const hours = new Date().getHours();
         const minutes = new Date().getMinutes();
         const seconds = new Date().getSeconds();
 
