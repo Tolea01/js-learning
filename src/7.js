@@ -2,6 +2,7 @@ const matrix = (num) => {
 
     const matrix = document.querySelector('.matrix');
     const out = document.querySelector('.out');
+
     matrix.textContent = `Matrix ${num}*${num}`;
 
     if (num == 10 || num == 1) {
