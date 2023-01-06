@@ -1,9 +1,8 @@
 const matrix = (num) => {
-    
-    const matrix = document.querySelector('.matrix');
-    matrix.innerHTML = `Matrix ${num}*${num}`;
 
+    const matrix = document.querySelector('.matrix');
     const out = document.querySelector('.out');
+    matrix.textContent = `Matrix ${num}*${num}`;
 
     if (num == 10 || num == 1) {
         return;
@@ -16,6 +15,6 @@ const matrix = (num) => {
         out.innerHTML += '<br>';
     }
 
-}
+};
 
-matrix(7);
+matrix(9);
