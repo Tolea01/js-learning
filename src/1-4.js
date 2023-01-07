@@ -5,3 +5,7 @@ window.onload = () => {
 setTimeout(() => {
    document.body.style.background = 'green';
 }, 3000);
+
+document.querySelector('#buttonOrange').addEventListener('click', () => {
+   document.body.style.background = 'orange';
+});
