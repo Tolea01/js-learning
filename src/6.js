@@ -1,6 +1,4 @@
-const table = document.createElement('table');
-
-document.body.appendChild(table);
+const table = document.querySelector('table');
 
 table.style.cssText = 'width: 500px; height: 500px; border: 2px solid black';
 
