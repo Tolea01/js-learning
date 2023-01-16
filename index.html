@@ -8,12 +8,40 @@
     <title>Document</title>
 </head>
 
-<body style="padding-top: 50px; display: flex; justify-content: center;">
-    <div id="parent-left" style="width: 400px; height: 400px; background-color: aqua;">
-        <div id="child" style="width: 70px; height: 70px; background-color: black; margin: 40px 0px 0px 60px;"
-            draggable="true"></div>
+<body style="display: grid; place-content: center;padding-top: 150px;">
+    <div class="input-form" style="margin-bottom: 20px;">
+        <input type="text" placeholder="Гость" style="width: 300px; height: 32px; border: 1px solid black;">
+        <button
+            style="height: 36px; background-color: #6AA74F; border: 1px solid black; margin-left: -5px;">Добавить</button>
     </div>
-    <div id="parent-right" style="width: 400px; height: 400px; background-color: red;"></div>
+    <table style="border-collapse: collapse">
+        <tbody>
+            <tr>
+                <td
+                    style="background-color: #EFEFEF; width: 300px; height: 30px; padding-left: 10px; border: 1px solid black;">
+                    Имя
+                </td>
+                <td style="background-color: #EFEFEF; width: 30px; height: 35px; border: 1px solid black;">
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 300px; height: 30px; padding-left: 10px; border: 1px solid black;">
+                    Пользователь
+                </td>
+                <td style="width: 30px; height: 35px; border: 1px solid black;" align="center">
+                    <i class="fa-solid fa-xmark" style="color: red;"></i>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 300px; height: 30px; padding-left: 10px; border: 1px solid black;">
+                    Админ
+                </td>
+                <td style="width: 30px; height: 35px; border: 1px solid black;" align="center">
+                    <i class="fa-solid fa-xmark" style="color: red;"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <!-- <script src="src/1-4.js"></script> -->
     <!-- <script src="src/5.js"></script> -->
     <!-- <script src="src/6.js"></script> -->
@@ -27,7 +55,9 @@
     <!-- <script src="src/16.js"></script> -->
     <!-- <script src="src/17.js"></script> -->
     <!-- <script src="src/18.js"></script> -->
-    <script src="src/19.js"></script>
+    <!-- <script src="src/19.js"></script> -->
+    <script src="src/20.js"></script>
+    <script src="https://kit.fontawesome.com/5067766925.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
