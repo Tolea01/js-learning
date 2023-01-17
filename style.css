@@ -20,7 +20,7 @@ body {
     margin-right: 40px;
 }
 
-.timer-button {
+#timer-button {
     position: absolute;
     top: 50%;
     left: 50%;
