@@ -1,17 +1,24 @@
-document.querySelector('#start').addEventListener('click', () => {
-    const interval = setInterval(() => {
-        const hours = new Date().getHours();
-        const minutes = new Date().getMinutes();
-        const seconds = new Date().getSeconds();
+const startButton = document.querySelector('#start');
+const stopButton = document.querySelector('#stop');
+const redElement = document.querySelector('#red');
+const greenElement = document.querySelector('#green');
+const blueElement = document.querySelector('#blue');
 
-        hours < 10 ? hours = '0' + hours : hours;
+const timer = () => {
+    const date = new Date();
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
 
-        document.querySelector('#red').textContent = hours;
-        document.querySelector('#green').textContent = ':' + minutes;
-        document.querySelector('#blue').textContent = ':' + seconds;
+    redElement.textContent = hours < 10 ? `0${hours}` : hours;
+    greenElement.textContent = `:${minutes}`;
+    blueElement.textContent = `:${seconds}`;
+}
+
+startButton.addEventListener('click', () => {
+    let intervalId = setInterval(timer, 1000);
+
+    stopButton.addEventListener('click', () => {
+        clearInterval(intervalId);
     });
-
-    document.querySelector('#stop').addEventListener('click', () => {
-        clearInterval(interval);
-    })
 });
