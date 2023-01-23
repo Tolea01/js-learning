@@ -4,29 +4,31 @@ const jsonObject = '[{"name":"John","surname":"Kennedy","patronymic":"Fitzgerald
 
 const employees = JSON.parse(jsonObject);
 
+createTableData = (object) => {
+  const td = document.createElement('td');
+  td.textContent = object;
+  tr.appendChild(td);
+};
+
 for (const key of employees) {
   const table = document.querySelector('#table-body');
-  const tr = document.createElement('tr');
+  var tr = document.createElement('tr');
+  tr.className = 'text-center';
 
   if (typeof key === 'object') {
     for (const objectkey of Object.values(key)) {
       if (typeof objectkey === 'object') {
         for (const objectKey2 of Object.values(objectkey)) {
-          const td = document.createElement('td');
-          td.textContent = objectKey2;
-          tr.appendChild(td);
+          createTableData(objectKey2);
         }
       } else {
-        const td = document.createElement('td');
-        td.textContent = objectkey;
-        tr.appendChild(td);
+        createTableData(objectkey);
       }
 
     }
 
     table.appendChild(tr)
   }
-
 }
 
 const salary = employees.map((elem) => parseInt(elem.salary));
