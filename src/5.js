@@ -13,6 +13,6 @@ const getPrimes = (n) => {
     }
   }
   return primes;
-};
+}
 
 console.log(getPrimes(10));
