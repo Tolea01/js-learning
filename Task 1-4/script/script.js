@@ -1,5 +1,9 @@
 const changeElemBackgroundByClassName = (elem, classname) => {
-  elem.classList.add(classname);
+  if (elem && classname) {
+    elem.classList.add(classname);
+  } else {
+    console.error('HTMLElement or classname not provided');
+  }
 };
 
 const addItem = () => {
@@ -12,9 +16,9 @@ const addItem = () => {
   newItem.textContent = `Элемент ${itemNumber}`;
 
   if (itemNumber % 2 == 0) {
-    newItem.style.backgroundColor = 'green';
+    changeElemBackgroundByClassName(newItem, 'background-color-green');
   } else {
-    newItem.style.backgroundColor = 'purple';
+    changeElemBackgroundByClassName(newItem, 'background-color-purple');
   }
 
   list.append(newItem);
