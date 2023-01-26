@@ -1,0 +1,21 @@
+body {
+  padding-top: 30px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  width: 500px;
+  height: 500px;
+  border: 2px solid black;
+}
+
+.white-cell {
+  background-color: white;
+  border: 2px solid black;
+}
+
+.black-cell {
+  background-color: black;
+}
