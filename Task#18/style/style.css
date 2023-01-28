@@ -1,0 +1,21 @@
+#player {
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  position: fixed;
+}
+
+#viewport {
+  width: 400px;
+  height: 400px;
+  background-color: black;
+  transform: translate(500px, 50px);
+}
+
+#player2 {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  background-color: red;
+  border-radius: 50%;
+}
