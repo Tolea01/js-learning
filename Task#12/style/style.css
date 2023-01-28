@@ -1,0 +1,10 @@
+body {
+  padding-top: 30px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.color-red {
+  color: red;
+}
