@@ -1,0 +1,48 @@
+body {
+  margin-top: 80px;
+  display: grid;
+  place-content: center;
+}
+
+.input-form {
+  margin-bottom: 20px;
+}
+
+input {
+  width: 300px;
+  height: 32px;
+  border: 1px solid black;
+}
+
+button {
+  height: 36px;
+  background-color: #6AA74F;
+  margin-left: -5px;
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.gray-color {
+  background-color: #EFEFEF;
+}
+
+.username-td {
+  width: 300px;
+  height: 30px;
+  border: 1px solid black;
+  padding-left: 10px;
+}
+
+.remove-td {
+  width: 30px;
+  height: 35px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.fa-xmark {
+  color: red;
+}
