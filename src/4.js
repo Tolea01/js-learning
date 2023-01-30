@@ -1,4 +1,5 @@
 const sumInputNumbers = () => {
+  
     const numbers = [];
 
     while (true) {
