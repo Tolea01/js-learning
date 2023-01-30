@@ -10,7 +10,6 @@ const person1 = {
 
 };
 
-
 const person2 = {
   name: 'Person2',
   age: 123,
@@ -25,6 +24,7 @@ const person2 = {
 const intersection = (firstObject, secondObject) => {
 
   const result = {};
+  const result = {};
 
   for (const key of Object.keys(firstObject)) {
     if (firstObject[key] === secondObject[key]) {
@@ -36,6 +36,15 @@ const intersection = (firstObject, secondObject) => {
 
   return result;
 
+  for (const key of Object.keys(firstObject)) {
+    if (typeof firstObject[key] === 'object') {
+      result[key] = intersection(firstObject[key], secondObject[key]);
+    } else if (firstObject[key] === secondObject[key]) {
+      result[key] = firstObject[key];
+    }
+  }
+
+  return result;
 };
 
 
