@@ -1,18 +1,17 @@
 const sumInputNumbers = () => {
-  
-    const numbers = [];
+  const numbers = [];
 
-    while (true) {
-        const value = prompt('Introduceti cifrele');
+  while (true) {
+    const value = prompt('Introduceti cifrele');
 
-        if (value == '' || value == null || !Number(value)) {
-            break;
-        }
-
-        numbers.push(Number(value));
+    if (value == '' || value == null || !Number(value)) {
+      break;
     }
-    
-    return numbers.reduce((prev, current) => prev + current, 0);
-}
+
+    numbers.push(Number(value));
+  }
+
+  return numbers.reduce((prev, current) => prev + current, 0);
+};
 
 alert(sumInputNumbers());
