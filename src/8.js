@@ -2,7 +2,6 @@
 // password: fundamentals
 
 checkUsernameAndPassword = () => {
-
   const username = prompt('Enter your username');
   const password = prompt('Enter your password');
 
@@ -15,7 +14,6 @@ checkUsernameAndPassword = () => {
   } else if (username != 'JavaScript') {
     alert('Неправильный username');
   }
-  
 };
 
 checkUsernameAndPassword();
