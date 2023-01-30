@@ -1,6 +1,6 @@
 const person = {
-    name: 'User1',
-    age: 123,
+  name: 'User1',
+  age: 123,
 };
 
 const user2 = Object.assign({}, person);

@@ -1,6 +1,6 @@
 const user = {
-    name: 'John',
-    surname: 'Smith',
+  name: 'John',
+  surname: 'Smith',
 };
 
 user.name = 'Pete';

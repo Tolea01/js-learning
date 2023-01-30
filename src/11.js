@@ -1,34 +1,34 @@
 const array = [
-    {
-        name: 'student1',
-        marks: [8, 10, 2, 5, 4],
-    },
+  {
+    name: 'student1',
+    marks: [8, 10, 2, 5, 4],
+  },
 
-    {
-        name: 'student2',
-        marks: [8, 1, 6, 7, 4],
-    },
+  {
+    name: 'student2',
+    marks: [8, 1, 6, 7, 4],
+  },
 
-    {
-        name: 'student3',
-        marks: [9, 6, 7, 5, 10],
-    },
+  {
+    name: 'student3',
+    marks: [9, 6, 7, 5, 10],
+  },
 
-    {
-        name: 'student4',
-        marks: [8, 7, 5, 5, 4],
-    },
+  {
+    name: 'student4',
+    marks: [8, 7, 5, 5, 4],
+  },
 
-    {
-        name: 'student5',
-        marks: [10, 10, 7, 9, 4],
-    },
+  {
+    name: 'student5',
+    marks: [10, 10, 7, 9, 4],
+  },
 ];
 
 // 1.******************************************************************************************
-const result = array.map((elem) => ( {
-    name: elem.name,
-    mark: elem.marks.reduce((prev, current) => prev + current) / elem.marks.length
+const result = array.map((elem) => ({
+  name: elem.name,
+  mark: elem.marks.reduce((prev, current) => prev + current) / elem.marks.length
 }));
 
 // console.log(result)
