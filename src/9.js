@@ -1,9 +1,15 @@
-const username = prompt('Enter your name');
+const greetUser = () => {
 
-alert(`Привет ${username}`);
+  const username = prompt('Enter your name');
 
-const question = confirm('Знаком с языком JavaScript?');
+  alert(`Привет ${username}`);
 
-const answer = question ? 'Молодец' : 'Можно начать изучение прямо сейчас';
+  const question = confirm('Знаком с языком JavaScript?');
 
-alert(answer);
+  const answer = question ? 'Молодец' : 'Можно начать изучение прямо сейчас';
+
+  alert(answer);
+
+};
+
+greetUser();

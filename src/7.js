@@ -1,13 +1,19 @@
-const age = prompt();
+const isOutsideRange = () => {
 
-// if (age >= 14 && age <= 90) {
-//     alert('True');
-// } else {
-//     alert('False');
-// }
+  const age = prompt('Enter age');
 
-if (!(age < 14 || age > 90)) {
+  // if (age >= 14 && age <= 90) {
+  //     alert('True');
+  // } else {
+  //     alert('False');
+  // }
+
+  if (!(age < 14 || age > 90)) {
     alert('True');
-} else {
+  } else {
     alert('False');
-}
+  }
+  
+};
+
+isOutsideRange();

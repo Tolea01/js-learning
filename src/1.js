@@ -1,33 +1,37 @@
-const n = 3;
+const convertToWord = (n) => {
 
-switch (n) {
+  switch (n) {
     case 1:
-        console.log('One');
-        break;
+      console.log('One');
+      break;
     case 2:
-        console.log('two');
-        break;
+      console.log('two');
+      break;
     case 3:
-        console.log('three');
-        break;
+      console.log('three');
+      break;
     case 4:
-        console.log('four');
-        break;
+      console.log('four');
+      break;
     case 5:
-        console.log('five');
-        break;
+      console.log('five');
+      break;
     case 6:
-        console.log('six');
-        break;
+      console.log('six');
+      break;
     case 7:
-        console.log('seven');
-        break;
+      console.log('seven');
+      break;
     case 8:
-        console.log('eight');
-        break;
+      console.log('eight');
+      break;
     case 9:
-        console.log('nine');
-        break;
+      console.log('nine');
+      break;
     default:
-        console.log(`${n} is not a digit`);
-}
+      console.log(`${n} is not a digit`);
+  }
+
+};
+
+convertToWord(3);

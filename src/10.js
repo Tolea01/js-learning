@@ -5,6 +5,7 @@ const dividers = (n) => {
       console.log(i);
     }
   }
-}
+
+};
 
 dividers(10);
