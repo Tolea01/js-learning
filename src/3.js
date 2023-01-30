@@ -6,9 +6,9 @@
 
 
 const getMonthName = (month) => {
-    const monthList = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  const monthList = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-    return monthList[month.getMonth()];
+  return monthList[month.getMonth()];
 };
 
 console.log(getMonthName(new Date("10/11/2009")));
