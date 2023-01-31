@@ -8,12 +8,16 @@ const weekDays = {
   "Su": "Воскресенье",
 }
 
-const days = Object.keys(weekDays);
-const translateRom = ['Luni', 'Marti', 'Miercuri', 'Joi', 'Vineri', 'Sambata', 'Duminica',];
-const object = {};
+const translate = (obj) => {
+  const days = Object.keys(obj);
+  const romWeekDays = ['Luni', 'Marti', 'Miercuri', 'Joi', 'Vineri', 'Sambata', 'Duminica',];
+  const newObject = {};
 
-for (let keys in days) {
-  object[days[keys]] = translateRom[keys];
-}
+  for (let keys in days) {
+    newObject[days[keys]] = romWeekDays[keys];
+  }
 
-console.log(object);
+  console.log(newObject);
+};
+
+translate(weekDays);

@@ -23,7 +23,6 @@ const person2 = {
 };
 
 const intersection = (firstObject, secondObject) => {
-
   const result = {};
 
   for (const key of Object.keys(firstObject)) {
@@ -35,7 +34,6 @@ const intersection = (firstObject, secondObject) => {
   }
 
   return result;
-
 };
 
 console.log(intersection(person1, person2));
