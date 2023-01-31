@@ -27,7 +27,7 @@ for (const key of employees) {
 
     }
 
-    table.appendChild(tr)
+    table.appendChild(tr);
   }
 }
 

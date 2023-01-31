@@ -4,7 +4,7 @@ const jsonObject = '{"name":"John","surname":"Kennedy","patronymic":"Fitzgerald"
 
 const person = JSON.parse(jsonObject);
 
-const test = (person) => {
+const displayEmployees = (person) => {
   for (const [key, value] of Object.entries(person)) {
     const element = document.querySelector(`#${key}`);
 
@@ -12,11 +12,11 @@ const test = (person) => {
       element.textContent = value;
     }
     if (typeof value === 'object') {
-      test(value);
+      displayEmployees(value);
     }
   }
 };
 
-test(person);
+displayEmployees(person);
 
-document.querySelector('#schedule').textContent = `${person['work-schedule'].to} - ${person['work-schedule'].from}`;
+document.querySelector('#work-schedule').textContent = `${person['work-schedule'].to} - ${person['work-schedule'].from}`;
