@@ -1,0 +1,9 @@
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+.matrix {
+  transform: translate(70px, -20px);
+}
