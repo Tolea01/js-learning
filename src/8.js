@@ -13,7 +13,7 @@ const timer = () => {
   redElement.textContent = hours < 10 ? `0${hours}` : hours;
   greenElement.textContent = `:${minutes}`;
   blueElement.textContent = `:${seconds}`;
-}
+};
 
 startButton.addEventListener('click', () => {
   let intervalId = setInterval(timer, 1000);
