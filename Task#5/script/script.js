@@ -4,29 +4,25 @@ const input = document.getElementById('input');
 
 input.setAttribute('readonly', '');
 
-const updatevalue = (button, operator) => {
-  if (button && operator) {
-    if (operator === '+') {
-      if (input.value < 9) {
-        input.value++;
-      }
-    } else if (operator === '-') {
-      if (input.value > 0) {
-        input.value--;
-      }
-    }
-    if (input.value === 9 || input.value === 0) {
-      button.disabled = true;
-    }
-  } else {
+const updateValue = (button, operator) => {
+  if (!button || !operator) {
     console.error('Enter all parameters in the "updateValue" function');
+    return;
   }
-}
+
+  if (operator === '+' && input.value < 9) {
+    input.value++;
+  } else if (operator === '-' && input.value > 0) {
+    input.value--;
+  }
+
+  button.disabled = (input.value === 9 || input.value === 0);
+};
 
 plusButton.addEventListener('click', () => {
-  updatevalue(plusButton, '+');
+  updateValue(plusButton, '+');
 });
 
 minusButton.addEventListener('click', () => {
-  updatevalue(minusButton, '-');
+  updateValue(minusButton, '-');
 });
