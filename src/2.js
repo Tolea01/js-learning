@@ -1,6 +1,15 @@
-const input = document.getElementById('input');
-const addButton = document.getElementById('add-button');
-const taskContainer = document.getElementById('task-container');
+const input = document.querySelector('#input');
+const addButton = document.querySelector('#add-button');
+const taskContainer = document.querySelector('#task-container');
+const NumberOfTasks = document.querySelector('.number-of-tasks');
+
+const calculateTaskCount = () => {
+  if (taskContainer.childNodes.length > 1) {
+    NumberOfTasks.textContent = `${taskContainer.childNodes.length} tasks`
+  } else {
+    NumberOfTasks.textContent = `${taskContainer.childNodes.length} task`;
+  }
+};
 
 const addTaskToContainer = (container) => {
   const taskContainerItem = document.createElement('div');
@@ -23,6 +32,7 @@ const addTaskToContainer = (container) => {
 
   task.addEventListener('change', () => {
     task.value === '' ? task.parentNode.remove() : false;
+    calculateTaskCount();
   });
 
   task.addEventListener('change', () => {
@@ -39,19 +49,24 @@ const addTaskToContainer = (container) => {
     if (event.target.classList.contains('fa-circle-minus')) {
       event.target.parentNode.remove();
     }
+    calculateTaskCount();
   });
 };
 
-const addTask = () => {
+const displayTasks = () => {
   if (!input.value) return;
+
   addTaskToContainer(taskContainer);
+
   input.value = '';
-}
+
+  calculateTaskCount();
+};
 
 addButton.addEventListener('click', () => {
-  addTask();
+  displayTasks();
 });
 
 input.addEventListener('keyup', (event) => {
-  event.key === 'Enter' ? addTask() : false;
+  event.key === 'Enter' ? displayTasks() : false;
 });
