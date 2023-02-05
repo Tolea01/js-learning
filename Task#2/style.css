@@ -1,0 +1,33 @@
+body {
+  display: grid;
+  place-content: center;
+}
+
+.container input {
+  width: 350px;
+}
+
+/* .border-none {
+  border: none;
+} */
+
+/* #task-container input {
+  border: none;
+  pointer-events: none;
+} */
+
+.disabledElement {
+  pointer-events: none;
+}
+
+.border-none {
+  border: none;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.shadow-none:focus {
+  box-shadow: none;
+}
