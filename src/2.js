@@ -3,6 +3,26 @@ const addButton = document.querySelector('#add-button');
 const taskContainer = document.querySelector('#task-container');
 const NumberOfTasks = document.querySelector('.number-of-tasks');
 
+window.addEventListener('load', () => {
+  loadTasks();
+});
+
+const loadTasks = () => {
+  const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+  tasks.forEach(task => {
+    input.value = task;
+    displayTasks();
+  });
+};
+
+const saveTasks = () => {
+  const tasks = [];
+  taskContainer.childNodes.forEach(task => {
+    tasks.push(task.childNodes[0].value);
+  });
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+};
+
 const calculateTaskCount = () => {
   if (taskContainer.childNodes.length > 1) {
     NumberOfTasks.textContent = `${taskContainer.childNodes.length} tasks`
@@ -28,7 +48,7 @@ const addTaskToContainer = (container) => {
 
   taskContainerItem.append(task, renameButton, removeButton);
 
-  container.append(taskContainerItem);
+  container.prepend(taskContainerItem);
 
   task.addEventListener('change', () => {
     task.value === '' ? task.parentNode.remove() : false;
@@ -37,6 +57,7 @@ const addTaskToContainer = (container) => {
 
   task.addEventListener('change', () => {
     task.readOnly = true;
+    saveTasks();
   });
 
   renameButton.addEventListener('click', () => {
@@ -50,6 +71,7 @@ const addTaskToContainer = (container) => {
       event.target.parentNode.remove();
     }
     calculateTaskCount();
+    saveTasks();
   });
 };
 
@@ -65,6 +87,7 @@ const displayTasks = () => {
 
 addButton.addEventListener('click', () => {
   displayTasks();
+  saveTasks();
 });
 
 input.addEventListener('keyup', (event) => {
