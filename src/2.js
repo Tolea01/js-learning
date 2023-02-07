@@ -48,7 +48,7 @@ const addTaskToContainer = (container) => {
 
   taskContainerItem.append(task, renameButton, removeButton);
 
-  container.prepend(taskContainerItem);
+  container.append(taskContainerItem);
 
   task.addEventListener('change', () => {
     task.value === '' ? task.parentNode.remove() : false;
@@ -91,5 +91,8 @@ addButton.addEventListener('click', () => {
 });
 
 input.addEventListener('keyup', (event) => {
-  event.key === 'Enter' ? displayTasks() : false;
+  if (event.key === 'Enter') {
+    displayTasks();
+    saveTasks();
+  }
 });
