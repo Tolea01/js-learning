@@ -7,15 +7,6 @@ body {
   width: 350px;
 }
 
-/* .border-none {
-  border: none;
-} */
-
-/* #task-container input {
-  border: none;
-  pointer-events: none;
-} */
-
 .disabledElement {
   pointer-events: none;
 }
