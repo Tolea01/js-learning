@@ -8,8 +8,9 @@ window.addEventListener('load', () => {
 });
 
 const loadTasks = () => {
-  const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-  tasks.forEach(task => {
+  const tasks = JSON.parse(localStorage.getItem('tasks'));
+
+  tasks.forEach((task) => {
     input.value = task;
     displayTasks();
   });
@@ -17,9 +18,11 @@ const loadTasks = () => {
 
 const saveTasks = () => {
   const tasks = [];
-  taskContainer.childNodes.forEach(task => {
+
+  taskContainer.childNodes.forEach((task) => {
     tasks.push(task.childNodes[0].value);
   });
+
   localStorage.setItem('tasks', JSON.stringify(tasks));
 };
 
