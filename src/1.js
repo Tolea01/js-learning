@@ -39,4 +39,5 @@ fetch('http://localhost:3000/todos')
   .then((data) => {
     createTableTemplate(data);
     displayData(data);
-  });
+  })
+  .catch((error) => console.error(error));
