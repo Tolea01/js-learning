@@ -1,6 +1,8 @@
+document.body.style = 'margin: 0';
+
 const CssBorder = 'border: 1px solid black';
 const table = document.body.appendChild(document.createElement('table'));
-table.style.cssText = `width: 100vw; text-align: center; margin-top: 30px; ${CssBorder}`;
+
 
 const createTableTemplate = (data) => {
   const tr = document.createElement('tr');
@@ -14,6 +16,8 @@ const createTableTemplate = (data) => {
     tr.appendChild(td);
     table.appendChild(tr);
   }
+
+  table.style.cssText = `width: 100vw; text-align: center; margin-top: 30px; ${CssBorder}`;
 };
 
 const displayData = (data) => {
