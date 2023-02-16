@@ -10,7 +10,7 @@ const createTableTemplate = (data) => {
   for (const key of Object.keys(data[0])) {
     const td = document.createElement('td');
 
-    td.textContent = key;
+    td.textContent = key.toUpperCase();
     td.style = CssBorder;
 
     tr.appendChild(td);
