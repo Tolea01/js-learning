@@ -38,10 +38,18 @@ const displayData = (data) => {
   }
 }
 
-fetch('http://localhost:3000/todos')
-  .then((data) => data.json())
+const getData = async (url) => {
+  const response = await fetch(url);
+
+  if (!response.ok) {
+    throw new Error('Server error');
+  }
+
+  return await response.json();
+};
+
+getData('http://localhost:3000/todos')
   .then((data) => {
     createTableTemplate(data);
     displayData(data);
-  })
-  .catch((error) => console.error(error));
+  });
