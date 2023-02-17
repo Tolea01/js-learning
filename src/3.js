@@ -1,4 +1,10 @@
+document.body.style.cssText = 'display: flex; justify-content: center';
+
+document.body.appendChild(document.createElement('button'));
+
 const button = document.querySelector('button');
+button.textContent = 'Send data';
+button.style.marginTop = '150px';
 
 const data = {
   title: 8888888,
