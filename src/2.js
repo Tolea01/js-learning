@@ -38,13 +38,29 @@
 //   }
 // }
 
-// fetch('https://jsonplaceholder.typicode.com/todos')
-//   .then((data) => data.json())
+// // fetch('https://jsonplaceholder.typicode.com/todos')
+// //   .then((data) => data.json())
+// //   .then((data) => {
+// //     createTableTemplate(data);
+// //     displayData(data);
+// //   })
+// //   .catch((error) => console.error(error));
+
+// const getData = async (url) => {
+//   const response = await fetch(url);
+
+//   if (!response.ok) {
+//     throw new Error('Server error');
+//   }
+
+//   return await response.json();
+// };
+
+// getData('https://jsonplaceholder.typicode.com/todos')
 //   .then((data) => {
 //     createTableTemplate(data);
 //     displayData(data);
-//   })
-//   .catch((error) => console.error(error));
+//   });
 
 // ---------------------------------------------------------------------------------------------------------------------------------------
 
@@ -76,7 +92,20 @@ const getDataById = (data, id) => {
   table.firstChild.style.textTransform = 'uppercase';
 }
 
-fetch('https://jsonplaceholder.typicode.com/todos')
-  .then((data) => data.json())
-  .then((data) => getDataById(data, 150))
-  .catch((err) => console.error(err));
+// fetch('https://jsonplaceholder.typicode.com/todos')
+//   .then((data) => data.json())
+//   .then((data) => getDataById(data, 150))
+//   .catch((err) => console.error(err));
+
+const getData = async (url) => {
+  const response = await fetch(url);
+
+  if (!response.ok) {
+    throw new Error('Server error');
+  }
+
+  return await response.json();
+};
+
+getData('https://jsonplaceholder.typicode.com/todos')
+  .then((data) => getDataById(data, 150));
