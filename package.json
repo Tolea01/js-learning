@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start-server": "webpack-dev-server --mode development --open",
-    "build": "webpack",
+    "watch": "webpack --mode development --watch",
     "dev": "webpack --config webpack.config.js --mode development ",
     "prod": "webpack --config webpack.config.js --mode production"
   },
@@ -23,6 +23,8 @@
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
     "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.3",
+    "file-loader": "^6.2.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.75.0",
