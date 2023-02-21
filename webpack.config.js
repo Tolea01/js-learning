@@ -48,7 +48,7 @@ module.exports = {
       filename: 'index.html'
     }),
     new MiniCssExtractPlugin({
-      filename: 'style.css'
+      filename: 'style.min.css'
     }),
     new CleanWebpackPlugin(),
   ]
