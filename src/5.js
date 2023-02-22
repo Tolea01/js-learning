@@ -11,12 +11,18 @@ const displayEmployees = (person) => {
     if (element) {
       element.textContent = value;
     }
+
     if (typeof value === 'object') {
-      displayEmployees(value);
+      if (key === 'work-schedule') {
+        const workScheduleString = JSON.stringify(`from:${value.from} to:${value.to}`).replace(/\"/g, '');
+        const workScheduleElement = document.querySelector(`#${key}`);
+
+        workScheduleElement ? workScheduleElement.textContent = workScheduleString : null;
+      } else {
+        displayEmployees(value);
+      }
     }
   }
 };
 
 displayEmployees(person);
-
-document.querySelector('#work-schedule').textContent = `${person['work-schedule'].to} - ${person['work-schedule'].from}`;
