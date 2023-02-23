@@ -4,32 +4,34 @@ const jsonObject = '[{"name":"John","surname":"Kennedy","patronymic":"Fitzgerald
 
 const employees = JSON.parse(jsonObject);
 
-createTableData = (object) => {
-  const td = document.createElement('td');
-  td.textContent = object;
-  tr.appendChild(td);
-};
+const displayJson = (jsonObject) => {
+  for (const key of jsonObject) {
+    const table = document.querySelector('#table-body');
+    const tr = document.createElement('tr');
+    tr.className = 'text-center';
 
-for (const key of employees) {
-  const table = document.querySelector('#table-body');
-  var tr = document.createElement('tr');
-  tr.className = 'text-center';
-
-  if (typeof key === 'object') {
-    for (const objectkey of Object.values(key)) {
-      if (typeof objectkey === 'object') {
-        for (const objectKey2 of Object.values(objectkey)) {
-          createTableData(objectKey2);
+    if (typeof key === 'object') {
+      for (const objectKey of Object.values(key)) {
+        if (typeof objectKey === 'object') {
+          for (const objectKey2 of Object.values(objectKey)) {
+            const td = document.createElement('td');
+            td.textContent = objectKey2;
+            tr.appendChild(td);
+          }
+        } else {
+          const td = document.createElement('td');
+          td.textContent = objectKey;
+          tr.appendChild(td);
         }
-      } else {
-        createTableData(objectkey);
+
       }
 
+      table.appendChild(tr);
     }
-
-    table.appendChild(tr);
   }
-}
+};
+
+displayJson(employees);
 
 const salary = employees.map((elem) => parseInt(elem.salary));
 const salaries = salary.reduce((prev, current) => Math.round((prev + current)));
