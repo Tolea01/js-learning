@@ -8,7 +8,7 @@ const showNotification = (option) => {
 
     notification.textContent = option.message;
 
-    option.className ? notification.className = option.className : false;
+    option.className ? notification.className = option.className : null;
 
     document.body.appendChild(notification);
 

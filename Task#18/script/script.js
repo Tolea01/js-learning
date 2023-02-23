@@ -34,19 +34,19 @@ const movePlayer2WithKeyboard = (event) => {
   switch (event.key) {
 
     case 'ArrowUp':
-      player2.offsetTop > viewport.offsetTop ? player2.style.top = player2.offsetTop - 10 + "px" : false;
+      player2.offsetTop > viewport.offsetTop ? player2.style.top = player2.offsetTop - 10 + "px" : null;
       break;
 
     case 'ArrowDown':
-      player2.offsetTop < viewport.offsetHeight - player2.offsetHeight ? player2.style.top = player2.offsetTop + 10 + "px" : false;
+      player2.offsetTop < viewport.offsetHeight - player2.offsetHeight ? player2.style.top = player2.offsetTop + 10 + "px" : null;
       break;
 
     case 'ArrowLeft':
-      player2.offsetLeft > viewport.offsetLeft ? player2.style.left = player2.offsetLeft - 10 + "px" : false;
+      player2.offsetLeft > viewport.offsetLeft ? player2.style.left = player2.offsetLeft - 10 + "px" : null;
       break;
 
     case 'ArrowRight':
-      player2.offsetLeft < viewport.offsetWidth - player2.offsetWidth ? player2.style.left = player2.offsetLeft + 10 + "px" : false;
+      player2.offsetLeft < viewport.offsetWidth - player2.offsetWidth ? player2.style.left = player2.offsetLeft + 10 + "px" : null;
       break;
 
     default:

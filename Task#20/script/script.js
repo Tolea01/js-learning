@@ -60,7 +60,7 @@ const addRowToTable = (tableBody) => {
 
 
 tbody.addEventListener('click', (event) => {
-  event.target.matches('.fa-xmark') ? event.target.parentNode.parentNode.remove() : false;
+  event.target.matches('.fa-xmark') ? event.target.parentNode.parentNode.remove() : null;
 });
 
 addButton.addEventListener('click', () => {
