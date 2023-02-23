@@ -8,6 +8,19 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 
+const jsLoaders = () => {
+  const loaders = [{
+    loader: 'babel-loader',
+    options: {
+      presets: ['@babel/preset-env'],
+    }
+  }]
+
+  isDev ? loaders.push('eslint-loader') : null;
+
+  return loaders;
+}
+
 module.exports = {
   entry: './src/2.js',
   output: {
@@ -30,12 +43,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
-          }
-        }
+        use: jsLoaders(),
       },
 
       {

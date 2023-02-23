@@ -6,7 +6,7 @@
   "scripts": {
     "start-server": "webpack-dev-server --mode development --open",
     "watch": "webpack --mode development --watch",
-    "dev": "webpack --config webpack.config.js --mode development ",
+    "dev": "webpack --config webpack.config.js --mode development",
     "prod": "webpack --config webpack.config.js --mode production"
   },
   "repository": {
@@ -22,10 +22,13 @@
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^9.1.2",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.3",
     "css-minimizer-webpack-plugin": "^4.2.2",
+    "eslint": "^7.0.0",
+    "eslint-loader": "^4.0.2",
     "file-loader": "^6.2.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
