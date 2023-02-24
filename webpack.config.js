@@ -32,7 +32,7 @@ const fileLoader = (folderPath) => {
   }];
 
   return loader;
-}
+};
 
 module.exports = {
   entry: './src/js/2.js',
