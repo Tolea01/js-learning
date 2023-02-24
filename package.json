@@ -4,10 +4,9 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start-server": "webpack-dev-server --mode development --open",
+    "dev": "webpack-dev-server --mode development --open",
     "watch": "webpack --mode development --watch",
-    "dev": "webpack --config webpack.config.js --mode development",
-    "prod": "webpack --config webpack.config.js --mode production"
+    "build": "webpack --config webpack.config.js --mode production"
   },
   "repository": {
     "type": "git",
@@ -27,6 +26,7 @@
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.3",
     "css-minimizer-webpack-plugin": "^4.2.2",
+    "dotenv-webpack": "^8.0.1",
     "eslint": "^7.0.0",
     "eslint-loader": "^4.0.2",
     "file-loader": "^6.2.0",

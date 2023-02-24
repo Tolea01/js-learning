@@ -7,6 +7,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 const jsLoaders = () => {
   const loaders = [{
@@ -19,13 +20,25 @@ const jsLoaders = () => {
   isDev ? loaders.push('eslint-loader') : null;
 
   return loaders;
+};
+
+const fileLoader = (folderPath) => {
+  const loader = [{
+    loader: 'file-loader',
+    options: {
+      name: '[name].[ext]',
+      outputPath: folderPath
+    }
+  }];
+
+  return loader;
 }
 
 module.exports = {
-  entry: './src/2.js',
+  entry: './src/js/2.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js'
+    filename: 'js/main.js',
   },
 
   devServer: {
@@ -34,7 +47,7 @@ module.exports = {
     },
     port: 3000,
     hot: isDev,
-    watchFiles: path.resolve(__dirname, 'src'),
+    watchFiles: [path.resolve(__dirname, 'src'), path.resolve(__dirname, 'public')],
   },
 
   module: {
@@ -64,16 +77,21 @@ module.exports = {
       },
 
       {
-        test: /\.(png|jpg|svg|ttf|mp3)$/,
-        use: ['file-loader']
-      }
+        test: /\.(png|jpg|svg)$/,
+        use: fileLoader('./images/'),
+      },
+
+      {
+        test: /\.(ttf|otf|wolf|wolf2|eot)$/,
+        use: fileLoader('./fonts/'),
+      },
 
     ]
   },
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/template.html',
+      template: 'public/template.html',
       filename: 'index.html',
       minify: {
         collapseWhitespace: isProd,
@@ -81,7 +99,7 @@ module.exports = {
       },
     }),
     new MiniCssExtractPlugin({
-      filename: 'style.min.css',
+      filename: 'css/style.min.css',
     }),
     new CleanWebpackPlugin(),
   ],
@@ -90,6 +108,7 @@ module.exports = {
     minimizer: [
       new CssMinimizerPlugin(),
       new TerserWebpackPlugin(),
+      new Dotenv(),
     ]
   }
 };

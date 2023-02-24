@@ -1,3 +1,3 @@
-import '../src/styles/styles.css';
+import '../css/styles.css';
 import './app.js';
 console.log('Working!');
